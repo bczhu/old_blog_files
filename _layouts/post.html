@@ -1,0 +1,103 @@
+---
+layout: default
+top: Kane
+---
+ <div id="page">
+<div class="page-header">
+  <h1>{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
+  
+  <div id="search-wrap">
+  <a href="/rss.xml"><img id="rss" src="/files/css/rss.gif" alt="rss"></a>
+  <img id="search"  src="/files/css/search.gif" alt="search" onclick="discontrol('search-form')">
+
+  <div id="search-form" class="navbar-search" style=" display: none;">
+
+<div id='cse' >Loading</div>
+</div>
+</div>
+
+</div>
+<div class="date">
+      <span>{{ page.date | date_to_long_string }}</span>
+    </div>
+	
+	<div>
+<ul class="tag_box inline"> 
+<li>标签：
+</li>
+      {% assign tags_list = page.tags %}
+      {% include JB/tags_list %}
+</ul>
+</div>
+<br>
+<br>
+  <div class="content">
+      {{ content }}
+    </div>
+<br>
+本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/3.0/ ">知识共享署名-非商业性使用-禁止演绎 3.0 Unported许可协议</a>进行许可。	
+<div>
+<ul class="tag_box inline"> 
+<li>标签：
+</li>
+      {% assign tags_list = page.tags %}
+      {% include JB/tags_list %}
+</ul>
+</div>
+<br/>
+<br/>
+    <hr>
+    <div class="pagination">
+      <ul>
+      {% if page.previous %}
+        <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a></li>
+      {% else %}
+        <li class="prev disabled"><a>&larr; Previous</a></li>
+      {% endif %}
+        <li><a href="/{{page.categories}}.html"> {{page.section}}</a> </li>
+      {% if page.next %}
+        <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
+      {% else %}
+        <li class="next disabled"><a>Next &rarr;</a>
+      {% endif %}
+      </ul>
+    </div>
+
+<!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_douban"></a>
+<a class="jiathis_button_renren"></a>
+<a class="jiathis_button_weixin"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	summary:"",
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+ </div>
+<div id="comments">
+	{% include JB/bisqus.html %}
+</div>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		extensions: ["tex2jax.js"],
+		jax: ["input/TeX", "output/HTML-CSS"],
+		tex2jax: {
+		inlineMath: [ ["\\(","\\)"],["\$","\$"] ],
+			displayMath: [ ["\\[","\\]"],["\$$","\$$"] ],
+			processEscapes: true
+		},
+		TeX: { equationNumbers: { autoNumber: "AMS" } },
+		"HTML-CSS": { availableFonts: ["TeX"] }
+	});
+</script>

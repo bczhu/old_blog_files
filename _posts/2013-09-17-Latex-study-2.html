@@ -1,0 +1,177 @@
+---
+layout: post
+title: Latex 学习(2)
+tags: [Latex] 
+categories: study
+section: 学习
+description: 这是关于学习Latex的笔记。
+---
+<style type="text/css"> div.p { margin-top: 7pt;}</style>
+ <style type="text/css"><!--
+ td div.comp { margin-top: -0.6ex; margin-bottom: -1ex;}
+ td div.comb { margin-top: -0.6ex; margin-bottom: -.6ex;}
+ td div.hrcomp { line-height: 0.9; margin-top: -0.8ex; margin-bottom: -1ex;}
+ td div.norm {line-height:normal;}
+ span.roman {font-family: serif; font-style: normal; font-weight: normal;} 
+ span.overacc2 {position: relative;  left: .8em; top: -1.2ex;}
+ span.overacc1 {position: relative;  left: .6em; top: -1.2ex;} --></style>
+ <style type="text/css"><!--
+ .tiny {font-size:30%;}
+ .scriptsize {font-size:xx-small;}
+ .footnotesize {font-size:x-small;}
+ .smaller {font-size:smaller;}
+ .small {font-size:small;}
+ .normalsize {font-size:medium;}
+ .large {font-size:large;}
+ .larger {font-size:x-large;}
+ .largerstill {font-size:xx-large;}
+ .huge {font-size:300%;}
+ --></style>
+<h1 align="center"><span style="color:#0000FF"><b>Latex 学习(2)</b></span> </h1>
+
+<h3 align="center">朱宝成<a href="#tthFtNtAAB" id="tthFrefAAB"><sup>1</sup></a> </h3>
+  <span class="large">
+<span style="color:#d83010"><em>*本文收集于网络，由于MathJax不完全支持Latex环境，所以结果与Latex编译会有出入。</em></span>
+<br>
+<br>
+
+<ol type="1">
+<li> Ctex修改默认pdf浏览器<br />
+  Ctex用WinEdt生成Pdf时，默认的是用Sumatra PDF浏览器，但是如果我们想改成我们更常用的adobe pdf或其他，则可以在WinEdt 菜单 Options &#8594; Execution Modes &#8594; Acrobat 里面设置。
+<div class="p"><!----></div>
+</li>
+
+<li> 数学环境下输入中文<br />
+  <tt>\mbox{中文}</tt>即可。
+<div class="p"><!----></div>
+</li>
+
+<li> 引用参考文献<br />
+  具体一个例子：
+  
+<pre>
+\documentclass[11pt,a4paper]{article}
+\usepackage{CJK}
+\usepackage{type1cm}
+\usepackage{times}
+\newcommand{\scite}[1]{\textsuperscript{\cite{#1}}}&nbsp;%既上标又加方括号
+\newcommand{\xiaosan}{\fontsize{15pt}{22pt}\selectfont}
+\newcommand{\hei}{\CJKfamily{hei}}
+\renewcommand{\baselinestretch}{1.3}
+\begin{document}
+\begin{CJK*}{GBK}{song}
+在本文中，引用了\scite{lu,bellman}这两篇文章。
+\renewcommand{\refname}{\xiaosan\centerline{参考文献}}
+\begin{thebibliography}{00}
+\setlength{\itemsep}{0pt}
+&nbsp;&nbsp;&nbsp;&nbsp;\bibitem{lu}陆锋.~最短路径算法:分类体系与研究进展[J].~测绘学报,&nbsp;2001.
+&nbsp;&nbsp;&nbsp;&nbsp;\bibitem{bellman}R.~E.&nbsp;Bellman.~On&nbsp;a&nbsp;routing&nbsp;problem[J].~Quart.&nbsp;Appl.&nbsp;Math.,~16:87--90,&nbsp;1958.
+\end{thebibliography}
+\end{CJK*}
+\end{document}
+
+第1行：声明该文档是一般文章类，且基本字体为11pt，纸张大小为A4纸。
+第2行：导入CJK宏包，支持中文。
+第3行：导入type1cm宏包，支持任意大小的字体。
+第4行：导入times宏包，英文用&nbsp;Times&nbsp;New&nbsp;Roman&nbsp;字体。
+第5行：重新设置引用文献时的标号样式为方括号+上标。
+第12行：设置参考文献的标题为“参考文献”，且居中对齐，默认是“Reference”。
+第13行：{00}表示参考文献的编号为2位数。
+第14行：每个文献之间的行距为一般文章行距，没有额外间隔。
+第15行：\bibitem{lu}.....&nbsp;，其中lu为引用标记，即如果文章中要引用该文献，则可以\scite{lu}。
+
+</pre>
+在本文中，引用了[<a href="#lu" id="CITElu">1</a>,<a href="#bellman" id="CITEbellman">2</a>]这两篇文章。
+
+<div class="p"><!----></div>
+<h2>References</h2>
+
+<dl>
+     <dt><a href="#CITElu" id="lu">[1]</a></dt><dd>陆锋.&nbsp;最短路径算法:分类体系与研究进展[J].&nbsp;测绘学报, 2001.
+    </dd>
+ <dt><a href="#CITEbellman" id="bellman">[2]</a></dt><dd>R.&nbsp;E. Bellman.&nbsp;On a routing problem[J].&nbsp;Quart. Appl. Math.,&nbsp;16:87-90, 1958.</dd>
+</dl>
+<div class="p"><!----></div>
+</li>
+
+<li> 公式中的空格<br />
+
+<table border="1">
+<tr><td align="left">两个quad空格 </td><td align="left"><tt>a&nbsp;\qquad&nbsp;b</tt> </td><td align="left">两个m的宽度 </td></tr>
+<tr><td align="left">quad空格</td><td align="left"><tt>a&nbsp;\quad&nbsp;b</tt> </td><td align="left">一个m的宽度 </td></tr>
+<tr><td align="left">大空格 </td><td align="left"><tt>a\&nbsp;b</tt> </td><td align="left">1/3m宽度 </td></tr>
+<tr><td align="left">中等空格 </td><td align="left"><tt>a\;b</tt> </td><td align="left">2/7m宽度 </td></tr>
+<tr><td align="left">小空格 </td><td align="left"><tt>a\,b</tt> </td><td align="left">1/6m宽度 </td></tr>
+<tr><td align="left">没有空格 </td><td align="left"><tt>ab</tt> </td><td align="left"></td></tr>
+<tr><td align="left">紧贴 </td><td align="left"><tt>a\!b</tt> </td><td align="left">缩进1/6m宽度 </td></tr></table>
+	
+<br />特别有用的是最后一个<tt>a\!b</tt>，它可以缩进，例如Dirac方程的协变导数<br /><tt>\partial\!\!\!\slash</tt>,&#8706;\slash.
+<div class="p"><!----></div>
+</li>
+
+<li>
+  在WinEdt中，输入完“<tt>\begin{&nbsp;xxx&nbsp;}</tt>”后，不忙着按回车去写其它内容，紧接着最后的“ }”后面，再输入一个“ }”（也就是键入“<tt>\begin{&nbsp;xxx&nbsp;}&nbsp;}</tt>”），这时WinEdt会自动将“<tt>\end{&nbsp;xxx&nbsp;}</tt>”补上，同时将光标停在两者之间的空白行上，并且已经自动缩进。如果输入<tt>\begin{&nbsp;xxx&nbsp;}</tt>时忘了这事儿，也没有关系，输入“<tt>\end</tt>”后，连续输入两个“{ ”，即“<tt>\end{&nbsp;{&nbsp;</tt>”，WinEdt会自动匹配最近一个未匹配的<tt>\begin{&nbsp;xxx&nbsp;}</tt>，并将其补全。
+<div class="p"><!----></div>
+</li>
+
+<li>
+  WinEdt 会使输入的文本自动换行. 要阻止自动换行, 在窗口下边框状态栏处, 点击蓝色Wrap的键, 使其变成灰色即可.
+<div class="p"><!----></div>
+</li>
+
+<li>
+  在WinEdt 文档窗, 选定文档点击鼠标右键, 选择InsertComment, 可以快速注释选定的文档. 若要恢复, 选择RemoveComment.
+<div class="p"><!----></div>
+</li>
+
+<li>
+   显示行号，设置书签，右键单击左边框。
+<div class="p"><!----></div>
+</li>
+
+<li>
+   在窗口下边框状态栏处，选定行(Line)或块(Block), 此功能在复制、删除文本时很有用.
+<div class="p"><!----></div>
+</li>
+
+<li>
+   如果要检验新近录入的公式或文本能否通过编译, 可以用鼠标选定该部分文本, Crtl+Shift+C编译即可. 从而避免在文字录入中反复编译、调试大篇幅文档. (此功能不适于中文文本, 除非您使用的是cct 文档类型).
+<div class="p"><!----></div>
+</li>
+
+<li> 另取一行用<tt>\\</tt> 或者<tt>\par</tt>,另取一页用<tt>\newpage</tt>,或者<tt>\clearpage</tt>。
+<div class="p"><!----></div>
+</li>
+
+<li> 页面间超链接<br />
+  <tt>\hyperlink{a1}{Appendix&nbsp;1}\hypertarget{a1}{}</tt><br />
+  例如，这是<a href="#a1">超链接</a><br />
+  这是一些文本。<br />
+  这是一些文本。<br />
+  这是一些文本。<br />
+  这是一些文本。<br />
+  这是一些文本。<br />
+   这是一些文本。<br />
+  这是一些文本。<br />
+  这是一些文本。<br />
+  这是一些文本。
+  <a id="a1"></a>
+
+<div class="p"><!----></div>
+  超链接到这里。<br />
+    这是一些文本。<br />
+  这是一些文本。<br />
+  这是一些文本。<br />
+  这是一些文本。<br />
+  这是一些文本。
+<div class="p"><!----></div>
+</li>
+
+<li> Latex中的左引号为tab上方的键。或者左右引号用<tt>\lq&nbsp;\rq</tt>。
+<div class="p"><!----></div>
+</li>
+</ol>
+</span><hr /><h3>Footnotes:</h3>
+
+<div class="p"><!----></div>
+<a id="tthFtNtAAB"></a><a href="#tthFrefAAB"><sup>1</sup></a>email:bczhu@fudan.edu.cn
