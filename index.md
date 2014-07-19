@@ -6,7 +6,6 @@ section: Home
 ---
 大家好，我是Kane，物理学博士在读，这是我的个人网站。主要是一些学习笔记、读书笔记和闲时的感想，欢迎交流。
 
-+-- {.section}
 Study
 ========
 [这里](/study.html)有我的一些笔记。
@@ -21,9 +20,7 @@ Study
 </ul>
 
 
-=--
 
-+-- {.section}
 Miscellaneous
 =====
 [这里](/life.html)是闲时的一些随想。
@@ -39,7 +36,6 @@ Miscellaneous
 <a href="/life.html">更多 &rarr;</a>
 </ul>
 
-=--
 
 关于本站：
 
