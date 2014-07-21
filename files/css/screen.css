@@ -472,11 +472,12 @@ p.delicious-extended:before { content: ' — '; }
 /* @group Footer */
 #footer {
 	margin-top: 0;
-	padding-top: 1px;
 	color: grey;
 	font-size: 87.5%;
 	line-height: 1.3em;
 	clear: both;
+	width: 70%;
+	float: right;
 }
 #footer address {
 	position: relative;
@@ -494,6 +495,7 @@ p.delicious-extended:before { content: ' — '; }
 	left: 0;
 	text-align: left;
 	display: block;
+	padding-bottom: 0.5em;
 }
 #footer .engine {
 	position: absolute;
@@ -633,6 +635,7 @@ opacity:0.5;
 .aside {
 	padding: 20px 20px 40px 20px;
 	margin-top: 10px;
+	margin-bottom: 10px;
     float: left;
     width: 15em;
     position: absolute;
@@ -667,6 +670,7 @@ margin: 0px 20px 0px 20px;
 	clear: both;
 padding-top: 0.5em;
 }
+
 /*#search-form {
 width: 141px;
 height: 35px;
