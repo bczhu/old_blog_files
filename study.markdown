@@ -15,7 +15,7 @@ group: navigation
 <div id="description">
 {{post.description}} 
  <ul class="tag_box inline">
-<li>标签：
+<li><i class="fa fa-tags"></i>：
 </li>
       		{% assign tags_list = post.tags %}
       		{% include JB/tags_list %}
