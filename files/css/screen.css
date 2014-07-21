@@ -78,15 +78,27 @@ sup { line-height: 1ex; }
 	line-height:1.5em;
 }
 
-#page, #disqus_thread {
+#page{
 	background: white;
 /*	background-image: url(grid.png); */
 	padding: 3em 3em 1.5em 3em;
 	border: 1px solid #ccc;
 	position: relative;
-	left: 20em;
+	left: 1.5em;
 	top: 10px;
-	width:70%;
+	width:68%;
+	float:left;
+}
+#disqus_thread {
+	background: white;
+/*	background-image: url(grid.png); */
+	margin-top: 2em;
+	padding: 3em 3em 1.5em 3em;
+	border: 1px solid #ccc;
+	position: relative;
+	left: 19em;
+	width:68%;
+	float:left;
 }
 
 /* More experimental CSS3 features */
@@ -96,7 +108,6 @@ sup { line-height: 1ex; }
 	-moz-box-shadow: 2px 2px 8px #aaa;	
 }
 
-#disqus_thread { padding-top: 0; }
 
 /* TODO
 #page { counter-reset: section; }
@@ -378,9 +389,7 @@ pre > code {
 
 
 /* @group Disqus */
-#disqus_thread {
-	margin-top: 2.93em;
-}
+
 .dsq-comment-body {
 	text-align: justify;
 	line-height: 1.29em;
@@ -463,13 +472,15 @@ p.delicious-extended:before { content: ' — '; }
 /* @group Footer */
 #footer {
 	margin-top: 0;
+	padding-top: 1px;
 	color: grey;
 	font-size: 87.5%;
 	line-height: 1.3em;
+	clear: both;
 }
 #footer address {
 	position: relative;
-	margin: .5em 0 0 0;
+	margin: 1em 0 0 0;
 	text-align: right;
 }
 #footer a {
@@ -620,21 +631,37 @@ opacity:0.5;
 .listing-seperator{font-weight:bold;}
 
 .aside {
-	position: absolute;
-    padding: 20px 20px 40px 20px;
-    margin-top: 30px;
+	padding: 20px 20px 40px 20px;
+	margin-top: 10px;
     float: left;
     width: 15em;
-    min-height: 500px;
+    
     height: auto;
     box-shadow:  3px 3px 6px rgba(0, 0, 0, 0.1), 1px 0 4px rgba(0, 0, 0, 0.3) inset;
     background: white;
 }
+.intro{
+	padding-top: 1em;
+}
 .intro .title {
     font-weight: bolder;
+    padding-bottom: 2px;
 }
 
-
+.calendar{
+text-align: center;
+font-size: 18px;
+padding-top: 5px;
+padding-bottom: 15px;
+vertical-align: middle;
+border: 1px solid #dddddd;
+margin: 0px 20px 0px 20px;
+}
+.day{
+	font-family: Impact;
+ 	font-size: 42px;
+ 	padding: 5px 5px 5px 5px;
+ }
 
 
 /*#search-form {
