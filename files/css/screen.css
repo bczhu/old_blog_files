@@ -84,7 +84,7 @@ sup { line-height: 1ex; }
 	padding: 3em 3em 1.5em 3em;
 	border: 1px solid #ccc;
 	position: relative;
-	left: 25%;
+	left: 19em;
 	top: 10px;
 	width:68%;
 	float:left;
@@ -96,7 +96,7 @@ sup { line-height: 1ex; }
 	padding: 3em 3em 1.5em 3em;
 	border: 1px solid #ccc;
 	position: relative;
-	left: 25%;
+	left: 19em;
 	width:68%;
 	float:left;
 }
@@ -637,7 +637,7 @@ opacity:0.5;
 	margin-top: 10px;
 	margin-bottom: 10px;
     float: left;
-    width: 18%;
+    width: 15em;
     position: absolute;
     height: auto;
     box-shadow:  3px 3px 6px rgba(0, 0, 0, 0.1), 1px 0 4px rgba(0, 0, 0, 0.3) inset;
