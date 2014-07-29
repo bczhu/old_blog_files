@@ -7,7 +7,7 @@ auto: true
 pygments: true
 markdown: rdiscount
 encoding: utf-8
-paginate: 30 
+paginate: 40 
 paginate_path: "page:num"
 #truncate: 300
 #lsi: BOOL
