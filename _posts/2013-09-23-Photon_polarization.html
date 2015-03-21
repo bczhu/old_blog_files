@@ -1,0 +1,386 @@
+---
+layout: post
+title: The description of EM wave polarization
+tags: [物理] 
+categories: study
+section: 学习
+description: 这是关于电磁波极化，Poincare 球，Stokes 参量的笔记。
+---
+<style type="text/css"> div.p { margin-top: 7pt;}</style>
+ <style type="text/css"><!--
+ td div.comp { margin-top: -0.6ex; margin-bottom: -1ex;}
+ td div.comb { margin-top: -0.6ex; margin-bottom: -.6ex;}
+ td div.hrcomp { line-height: 0.9; margin-top: -0.8ex; margin-bottom: -1ex;}
+ td div.norm {line-height:normal;}
+ span.roman {font-family: serif; font-style: normal; font-weight: normal;} 
+ span.overacc2 {position: relative;  left: .8em; top: -1.2ex;}
+ span.overacc1 {position: relative;  left: .6em; top: -1.2ex;} --></style>
+ <style type="text/css"><!--
+ .tiny {font-size:30%;}
+ .scriptsize {font-size:xx-small;}
+ .footnotesize {font-size:x-small;}
+ .smaller {font-size:smaller;}
+ .small {font-size:small;}
+ .normalsize {font-size:medium;}
+ .large {font-size:large;}
+ .larger {font-size:x-large;}
+ .largerstill {font-size:xx-large;}
+ .huge {font-size:300%;}
+ --></style>
+<h1 align="center"><span style="color:#0000FF"><b>The description of EM wave polarization</b></span> </h1>
+
+<h3 align="center">Kane<a href="#tthFtNtAAB" id="tthFrefAAB"><sup>1</sup></a> </h3>
+<div class="large">For a EM wave, we denote the direction of E field as the direction of polarization, the most general form for a EM wave propagating in space is
+
+\begin{align}
+\begin{split}
+\vec{E}(t)=&\hat{h}E_h+\hat{v}E_v\\
+  =&\hat{h}e_hcos(kx-\omega t+\psi_h)+\hat{v}e_vcos(kx-\omega t+\psi_v) \label{1}
+\end{split}
+\end{align}
+
+where $\hat{k},\hat{h},\hat{v}$ form a triad, and $e_h,e_v$ are assumed to be positive.
+
+<div class="p"><!----></div>
+(As a rule of thumb, we see the polarization state should be determined by $e_h/e_v$ and $\psi_v-\psi_h$, also, if we keep the E field normalized, then it could be described by 2 parameters, which form the face of a sphere, this is called Poincar&#233; Sphere. Of cause, we could using exponent to denote E field as
+  
+  \begin{align}
+  \begin{split}
+ \vec{E}(t)=&\hat{h}e_he^{i(kx-\omega t+\psi_h)}+\hat{v}e_ve^{i(kx-\omega t+\psi_v)} \\
+  =&(\hat{h}e_h+\hat{v}e_ve^{i\psi})e^{i(kx-\omega t+\psi_h)}
+  \end{split}
+\end{align}
+where $\psi=\psi_v-\psi_h$ is the phase different between $E_h$ and $E_v$.
+)
+
+<div class="p"><!----></div>
+For example:
+<ol type="1">
+<li> $\psi=2m\pi$,($m=0,1,2,\cdots$) <br />
+              
+                \begin{align}
+                \vec{E}(t)=(\hat{h}e_h+\hat{v}e_v)e^{i(kx-\omega t+\psi_h)}
+              \end{align}
+              
+              is linear polarized in first and third quadrant.
+<div class="p"><!----></div>
+</li>
+
+<li> $\psi=(2m+1)\pi$,($m=0,1,2,\cdots$) <br />
+              
+                \begin{align}
+                \vec{E}(t)=(\hat{h}e_h-\hat{v}e_v)e^{i(kx-\omega t+\psi_h)}
+              \end{align}
+              
+              is linear polarized in second and fourth quadrant.
+<div class="p"><!----></div>
+</li>
+
+<li> $\psi=\pm\pi/2$ and $e_h=e_v=e_0$<br />
+              
+               \begin{align}
+                \vec{E}(t)=e_0(\hat{h}\pm i\hat{v})e^{i(kx-\omega t+\psi_h)}
+              \end{align}
+              
+              represents left/right circular polarization respectively.
+<div class="p"><!----></div>
+</li>
+
+<li>$\psi=\pm\pi/2$ and $e_h\neq e_v$ <br />
+              
+               \begin{align}
+                \vec{E}(t)=(\hat{h}e_h\pm i\hat{v}e_v)e^{i(kx-\omega t+\psi_h)}
+              \end{align}
+              
+              represents left/right elliptical polarization respectively, the major and minor axis are along $\hat{h}$ and $\hat{v}$ direction. We have
+              
+              
+                \begin{align}
+              \begin{split}
+                \vec{E}(t)=&\hat{h}e_hcos(kx-\omega t+\psi_v)\mp\hat{v}e_vsin(kx-\omega t+\psi_v)\\
+                =&\hat{h}E_h+\hat{v}E_v
+              \end{split}
+              \end{align}
+              \begin{align}
+                \Rightarrow (\frac{E_h}{e_h})^2+(\frac{E_v}{e_v})^2=1
+              \end{align}
+              when $e_h>e_v$, $e_h$ is the major axis, $e_v$ is the minor axis.
+<div class="p"><!----></div>
+</li>
+</ol>
+For the general elliptical polarized wave, from Eq.(\ref{1})
+\begin{align}
+  \vec{E}(t)=&\hat{h}E_h+\hat{v}E_v  \nonumber\\
+  =&\hat{h}e_hcos(kx-\omega t+\psi_h)+\hat{v}e_vcos(kx-\omega t+\psi_v)
+\end{align}
+The polarization ellipse shows below,
+
+<div class="p"><!----></div>
+<a id="tth_fIg1">
+</a> <div style="text-align:center">
+<img src='/files/images/Photonpicture/1.jpg'>
+
+<div style="text-align:center">Figure 1: Elliptical Polarization</div> <a id="f1">
+</a>
+</div>
+<div class="p"><!----></div>
+Here, $e_1$ is the major axis, $e_2$ is the minor axis, and we define
+\begin{align}
+  tan\beta=\frac{e_2}{e_1}    \quad\quad\quad
+                                \begin{array}{ll}
+                                  0\leq\beta\leq\pi/4, & \hbox{left-hand polarization;} \\
+                                  -\pi/4\leq\beta\leq 0, & \hbox{right-hand polarization.}
+                                \end{array}
+\end{align}
+From Eq.(\ref{1}), we have
+$$
+\frac{E_h}{e_h}=cos(kx-\omega t+\psi_h)
+$$$$
+\frac{E_v}{e_v}=cos(kx-\omega t+\psi_v)
+$$
+that is
+ \begin{align}
+  \frac{E_v}{e_v}=\frac{E_h}{e_h}cos\psi-\sqrt{1-(\frac{E_h}{e_h})^2}sin\psi  \nonumber \\
+  \Rightarrow (\frac{E_h}{e_h})^2+(\frac{E_v}{e_v})^2-2\frac{E_h}{e_h}\frac{E_v}{e_v}cos\psi=sin^2\psi
+\end{align}
+(Or notice that
+  \begin{align}
+  \frac{E_h}{e_h}sin\psi_v-\frac{E_v}{e_v}sin\psi_h=cos(kx-\omega t)sin\psi \\
+  \frac{E_h}{e_h}cos\psi_v-\frac{E_v}{e_v}cos\psi_h=sin(kx-\omega t)sin\psi
+\end{align}
+Eliminating the time dependence $t$, we have
+ \begin{align}
+   (\frac{E_h}{e_h})^2+(\frac{E_v}{e_v})^2-2\frac{E_h}{e_h}\frac{E_v}{e_v}cos\psi=sin^2\psi
+\end{align}
+)
+
+<div class="p"><!----></div>
+We can write the E field in major/minor coordinate system, first we have the unit vector along major and minor axis are
+\begin{align}
+\begin{split}
+ \hat{1}=&cos\alpha\hat{h}+sin\alpha\hat{v} \\
+   \hat{2}=&-sin\alpha\hat{h}+cos\alpha\hat{v} \label{14}
+\end{split}
+\end{align}
+where $\alpha\in[0,\pi)$, that is
+\begin{align}
+  \begin{split}
+  \hat{h}=&cos\alpha\hat{1}-sin\alpha\hat{2} \\
+   \hat{v}=&sin\alpha\hat{1}+cos\alpha\hat{2}
+  \end{split}
+\end{align}
+The general E field can also be written as
+\begin{align}
+  \vec{E}(t)=\hat{1}e_1cos(kx-\omega t+\psi_0)-\hat{2}e_2sin(kx-\omega t+\psi_0)  \label{15}
+\end{align}
+From Eq.(\ref{1}), we also get
+\begin{align}
+\begin{split}
+ \vec{E}(t)=&\hat{1}e_1cos(kx-\omega t+\psi_0)-\hat{2}e_2sin(kx-\omega t+\psi_0)\\
+ =&\hat{h}e_hcos(kx-\omega t+\psi_h)+\hat{v}e_vcos(kx-\omega t+\psi_v)\\
+ =&\hat{1}(e_hcos(kx-\omega t+\psi_h)cos\alpha+e_vcos(kx-\omega t+\psi_v)sin\alpha)\\
++&\hat{2}(-e_hcos(kx-\omega t+\psi_h)sin\alpha+e_vcos(kx-\omega t+\psi_v)cos\alpha)
+\end{split}
+\end{align}
+We get
+  \begin{align}
+    e_1cos\psi_0=e_hcos\psi_hcos\alpha+e_vcos\psi_vsin\alpha \label{17a}\\
+    e_1sin\psi_0=e_hsin\psi_hcos\alpha+e_vsin\psi_vsin\alpha \label{17b}\\
+    e_2cos\psi_0=-e_hsin\psi_hsin\alpha+e_vsin\psi_vcos\alpha \label{17c}\\
+    e_2sin\psi_0=e_hcos\psi_hsin\alpha-e_vcos\psi_vcos\alpha \label{17d}
+  \end{align}
+$(Eq.(\ref{17a}))^2+(Eq.(\ref{17b}))^2$, we get
+\begin{align}
+  e_1^2=e_h^2cos^2\alpha+e_v^2sin^2\alpha+e_he_vsin2\alpha cos\psi \label{18}
+\end{align}
+$(Eq.(\ref{17c}))^2+(Eq.(\ref{17d}))^2$, we get
+\begin{align}
+  e_2^2=e_1^2tan^2\beta=e_h^2sin^2\alpha+e_v^2cos^2\alpha-e_he_vsin2\alpha cos\psi \label{19}
+\end{align}
+Note that $e_1^2+e_2^2=e_h^2+e_v^2$.<br>
+$Eq.(\ref{17a})\cdot Eq.(\ref{17c})+Eq.(\ref{17b})\cdot Eq.(\ref{17d})$, we get
+\begin{align}
+  e_1^2tan\beta=e_he_vsin\psi \label{20}
+\end{align}
+$Eq.(\ref{17a})\cdot Eq.(\ref{17d})-Eq.(\ref{17b})\cdot Eq.(\ref{17c})$, we get
+\begin{align}
+  2e_he_vcos\psi=(e_h^2-e_v^2)tan2\alpha \label{21}
+\end{align}
+
+<div class="p"><!----></div>
+Now we define four <b><em>Stokes parameters</em></b> as
+
+  \begin{align}
+    S_0=&\frac{1}{\eta}(e_h^2+e_v^2) \label{22a}\\
+    S_1=&\frac{1}{\eta}(e_h^2-e_v^2) \label{22b}\\
+    S_2=&\frac{2}{\eta}e_he_vcos\psi \label{22c}\\
+    S_3=&\frac{2}{\eta}e_he_vsin\psi \label{22d}
+  \end{align}
+$S_0$ is the total intensity of the wave, $S_1$ is large(in absolute value) if it has a preference for linear polarization along $x$ or $y$, $S_2$ is large when polarization is along $\pm 45^o$,$S_3$ is large when it is circular polarized. Notice that $S_0^2=S_1^2+S_2^2+S_3^2$, $\eta$ can set to be $e_h^2+e_v^2$ to make $S_0$ normalized.<br>
+Adding Eq.(\ref{18}) and Eq.(\ref{19}), we have
+\begin{align}
+\begin{split}
+  &e_1^2(1+tan^2\beta)=\eta S_0 \\
+  &\Rightarrow e_1^2=\eta S_0 cos^2\beta \label{23}
+\end{split}
+\end{align}
+Subtracting Eq.(\ref{19}) from Eq.(\ref{18}) and making use of Eq.(\ref{21}) and Eq.(\ref{23}), we have
+\begin{align}
+  S_1=S_0cos2\beta cos2\alpha \label{24}
+\end{align}
+From Eq.(\ref{22c}),Eq.(\ref{21}),Eq.(\ref{24}), we have
+\begin{align}
+  S_2=S_0cos2\beta sin2\alpha \label{25}
+\end{align}
+From Eq.(\ref{22d}),Eq.(\ref{20}),Eq.(\ref{23}), we have
+\begin{align}
+  S_3=S_0sin2\beta \label{26}
+\end{align}
+Define $\theta=\pi/2-2\beta,\phi=2\alpha$, we get
+
+  \begin{align}
+    S_1=&S_0sin\theta cos\phi \\
+    S_2=&S_0sin\theta sin\phi \\
+    S_3=&S_0cos\theta
+  \end{align}
+  
+$\theta,\phi$ defines the <b><em>Poincar&#233; Sphere</em></b>(Fig.<a href="f2">2</a>), with $\theta\in[0,\pi/2)$ is right-hand polarization and $\theta\in(\pi/2,\pi]$ is left-hand polarization. We see that $\beta$ is the departure from linear polarization and $\alpha$ is the ratio of $E_h$ and $E_v$ component.
+
+<div class="p"><!----></div>
+<a id="tth_fIg2">
+</a> <div style="text-align:center">
+<img src='/files/images/Photonpicture/2.jpg'>
+
+<div style="text-align:center">Figure 2: Poincar&#233; Sphere</div> <a id="f2">
+</a>
+</div>
+<div class="p"><!----></div>
+$\alpha,\beta$ related to $\psi,e_h,e_v$ through
+
+\begin{align}
+  tan\beta=&\frac{e_2}{e_1},\\
+  tan2\alpha=&\frac{2e_he_vcos\psi}{e_h^2-e_v^2}.
+\end{align}
+
+The polarization vector in Poincar&#233; Sphere $(\theta,\phi)$ is
+\begin{align}
+  e^{i\gamma}\left(
+                                                                            \begin{array}{c}
+                                                                              cos\frac{\theta}{2} \\
+                                                                              sin\frac{\theta}{2}e^{i\phi} \\
+                                                                            \end{array}
+                                                                          \right).
+\end{align}
+It corresponding to the eigenstate
+\begin{align}
+|\Psi\rangle=\frac{1}{\sqrt{2}}\left(
+                                                                            \begin{array}{c}
+                                                                              E_h-iE_v \\
+                                                                              E_h+iE_v \\
+                                                                            \end{array}
+                                                                          \right)=\left(
+                                                                            \begin{array}{c}
+                                                                              \Psi_l \\
+                                                                              \Psi_r\\
+                                                                            \end{array}
+                                                                          \right)
+\end{align}
+of the polarization matrix
+\begin{align}
+\textbf{H}(\textbf{r})=\textbf{r}\cdot\sigma=\frac{1}{2}\left(
+                                \begin{array}{cc}
+                                  z & x-iy \\
+                                  x+iy & -z \\
+                                \end{array}
+                              \right)=\frac{1}{2}\left(
+                                                   \begin{array}{cc}
+                                                     cos\theta & sin\theta e^{-i\phi} \\
+                                                     sin\theta e^{i\phi} & -cos\theta \\
+                                                   \end{array}
+                                                 \right).
+\end{align}
+where $\sigma$ is the vector of Pauli spin matrix and $\textbf{r}=(x,y,z)$ is a unit vector with polar angles $\theta$ and $\phi$.
+
+<div class="p"><!----></div>
+In literature, we also have <b><em>Jones vector</em></b>, which is defined by
+\begin{align}
+ |\Psi'\rangle=\left(
+                                                                            \begin{array}{c}
+                                                                              E_h \\
+                                                                              E_v \\
+                                                                            \end{array}
+                                                                          \right)=e^{i\delta}\left(
+                                                                            \begin{array}{c}
+                                                                              cos\alpha cos\beta-isin\alpha sin\beta \\
+                                                                              sin\alpha cos\beta+icos\alpha sin\beta \\
+                                                                            \end{array}\right), \label{30}
+\end{align}
+where $\alpha,\beta$ is what we defined before and $\delta=\gamma+\alpha$.<br>
+(Prove: From Eq.(\ref{15}),we can get
+
+  \begin{align}
+    E_1=&e_1cos\psi_0\\
+    E_2=&-e_1tan\beta sin\psi_0=ie_1tan\beta cos\psi_0=itan\beta E_1
+  \end{align}
+
+we have omitted the phase factor $kx-\omega t$, from Eq.(\ref{14}), we get
+
+  \begin{align}
+    E_h=cos\alpha E_1-sin\alpha E_2\\
+    E_v=sin\alpha E_1+cos\alpha E_2
+  \end{align}
+
+
+  \begin{align}
+   \Rightarrow E_h=&E_1(cos\alpha-isin\alpha tan\beta)=E_1'(cos\alpha cos\beta-isin\alpha sin\beta)\\
+    E_v=&E_1(sin\alpha+icos\alpha tan\beta)=E_1'(sin\alpha cos\beta+icos\alpha sin\beta)
+  \end{align}
+
+which is just Eq.(\ref{30}).)
+
+<div class="p"><!----></div>
+So we can see that Jones vector is convenient when dealing with linear polarization and polarization transformation, while Poincar&#233; vector is convenient for circular polarized beam.
+
+<div class="p"><!----></div>
+For <b><em>partial polarization</em></b> beam, Stokes parameters show their natural merit. Generalize the definition:
+
+  \begin{align}
+    S_0=&\frac{1}{\eta}(&lt;E_h^2&#62;+&lt;E_v^2&#62;) \\
+    S_1=&\frac{1}{\eta}(&lt;E_h^2&#62;-&lt;E_v^2&#62;)=S_0&lt;cos2\beta cos2\alpha&#62; \\
+    S_2=&\frac{2}{\eta}&lt;E_hE_vcos\psi&#62;=\frac{2}{\eta}&lt;Re(E_h^*E_v&#62;=S_0&lt;cos2\beta sin2\alpha&#62; \\
+    S_3=&\frac{2}{\eta}&lt;E_hE_vsin\psi&#62;= \frac{2}{\eta}&lt;Re(-iE_h^*E_v&#62;=S_0&lt;sin2\beta&#62;
+  \end{align}
+
+For completely unpolarized waves, $E_h$ and $E_v$ are uncorrelated, we have $S_1=S_2=S_3=0$, so for partial polarized waves, we have $S_0^2>S_1^2+S_2^2+S_3^2$. We can split the partial polarized beam into two components,
+\begin{align}
+  \vec{S}=\vec{S}_{un}+\vec{S}_p
+\end{align}
+$\vec{S_{un}}$represents unpolarized part and $\vec{S_p}$ the totally polarized part with
+
+  \begin{align}
+    \vec{S}=&(S_0,S_1,S_2,S_3)\\
+    \vec{S}_{un}=&([S_0-\sqrt{S_1^2+S_2^2+S_3^2}],0,0,0)\\
+    \vec{S}_p=&(\sqrt{S_1^2+S_2^2+S_3^2},S_1,S_2,S_3)
+  \end{align}
+
+and we can define the  <b><em>degree of polarization </em></b> $\mathscr{P}$ as
+\begin{align}
+  \mathscr{P}=\frac{\sqrt{S_1^2+S_2^2+S_3^2}}{S_0}
+\end{align}
+then $\vec{S}=S_0(1,\mathscr{P}cos2\beta cos2\alpha,\mathscr{P}cos2\beta sin2\alpha,\mathscr{P}sin2\beta)$, which is in the Poincar\'{e} Sphere.
+
+<div class="p"><!----></div>
+
+<h2>References</h2>
+
+<dl>
+     <dt>[1]  Jin Au Kong, "Electromagnetic wave theory".
+    </a></dt><dd> <dt>[2] M.V.Berry, "The Adiabatic Phase and Pancharatnam's Phase for Polarized Light".
+    </a></dt><dd> <dt>[3] "Chapter 2 Matrix description of wave propagation and polarization".</a></dt><dd></dl>
+</dd>
+</dd>
+<hr /><h3>Footnotes:</h3>
+
+<div class="p"><!----></div>
+<a id="tthFtNtAAB"></a><a href="#tthFrefAAB"><sup>1</sup></a>email:bczhu1990@gmail.com
+</div>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }} &larr; {{ page.top }}</title>
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    <meta name="author" content="{{ site.author.name }}">
+
+    <!-- Enable responsive viewport -->
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+   <link rel="start" href="/" />
+    <!-- Le styles -->
+	{% if page.keywords %}
+	<meta name="keywords" content="{{ page.keywords }}">
+	{% endif %}
+	
+<!--	{% if page.feed %}
+  	<link rel="alternate" type="application/atom+xml" href="{{ page.feed }}" title="RSS feed" />
+	{% endif %}
+-->	
+    <!-- atom & rss feed -->
+<!--    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+-->
+    <link rel="stylesheet" href="/files/css/syntax.css" type="text/css" />
+
+   <!-- Homepage CSS -->
+   <link rel="stylesheet" href="/files/css/screen.css" type="text/css" />
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+
+    <!-- tapiro search 
+<script src="/files/js/jquery-1.6.1.min.js"></script>
+<script src="/fiels/js/jquery-tapir.min.js"></script>
+-->
+<script src='/files/js/search.js' type='text/javascript'></script>
+<!--<script src='/files/js/outliner.js' type='text/javascript'></script>-->
+<!--<script src='//www.google.com/jsapi' type='text/javascript'></script>
+<script src='/files/js/gsearch.js' type='text/javascript'></script>
+<link rel="stylesheet" href="/files/css/gsearch.css" type="text/css" />
+-->
+<script type="text/javascript" src="/files/js/calendar.js"></script>
+<link href="/files/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+
+  <body id="{{ page.section }}">
+
+    
+
+  <div id="site">
+
+  
+
+    <div id="header">
+  
+  <h1>  <a title="My Personal Site" href="/">{{ site.title }}</a> </h1>
+  
+          <ul class="nav">
+           <li><a class="home" href="/">首页</a></li>
+  <li><a class="study" href="/study.html">学习</a></li>
+  <li><a class="life" href="/life.html">随想</a></li>
+  <li><a class="tag" href="/tags.html">分类</a></li>
+  <li><a class="contact" href="/contact.html">联系</a></li>
+          </ul>
+ 
+
+    </div>
+
+
+<div class="aside">
+      <div class="calendar">
+        <script language="javascript" type="text/javascript">
+                  getdate("cn");
+                </script>
+      </div>
+  <div class="intro">
+    <h4 class="title"> 简介 </h4>
+    <img id="logo" src="/files/images/logo.jpg" alt="logo" >
+    <br>
+    大家好，我是Kane，物理学博士在读，这是我的个人网站。主要是一些学习笔记、读书笔记和闲时的感想，欢迎交流。
+  <br><br>
+  INFP,理想主义者，Simplist.
+  <br>
+  现在处在一定的迷茫阶段。常思考人生的意义和追逐信仰而不得，但至少发现知识、爱与成长应是其中的很大一部分。
+  <br>
+  希望自己能学会好好的爱自己、爱他人、爱世界。
+  <br>
+  Everyone is fighting a battle you know nothing about, so, be kind, always.
+  <br>
+God, grant me the serenity to accept the things I cannot change, the courage to change the things I can , and wisdom to know the difference.
+</div>
+</div>
+
+
+
+
+
+        {{ content }}
+
+<a style="position:fixed;bottom:5px;right:5px;" href="#" title="Back to Top">
+            <img src="/files/images/btt.png" />
+        </a>
+   <div id="footer">
+      <address>
+        
+    <span class="copyright">
+    Content by
+    <a href="/">KANE</a><a href="http://creativecommons.org/licenses/by-nc-nd/3.0/ ">(SOME RIGHTS RESERVED)</a>
+    </span>
+    <span class="engine">
+          Powered by <a href="https://github.com/jekyll/jekyll" title="A static, minimalist CMS">Jekyll</a>
+      &amp;<a href="http://mark.reid.name/" title="Mark Reid">MARK REID</a>
+      </span>
+       
+        </address>
+      </div>     
+
+   
+</div>
+
+
+{% include JB/bisquscount.html %}
+    {% include JB/analytics %}
+  </body>
+
+</html>

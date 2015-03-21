@@ -1,0 +1,33 @@
+---
+layout: page
+title: 欢迎
+group: navigation
+section: Home
+---
+<h2 >文章列表 </h2>
+<ul class="posts">
+  {% for post in paginator.posts %}
+  {% if post.categories contains 'life' or post.categories contains 'study' %}
+    {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
+  {% if year != y %}
+    {% assign year = y %}
+    <li class="listing-seperator">{{ y }}</li>
+  {% endif %}
+  <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time> &raquo;
+    <a href="{{ post.url }}">{{ post.title }}</a>
+    {% if site.truncate %}
+    <p>{{ post.content | strip_html | truncate: site.truncate }}</p>
+    {% endif%}
+  </li>
+  {% endif%}
+{% endfor %}
+</ul>
+
+{% include paginate.html %}
+
+<br>
+
+关于本站：
+
+极简主义是我的人生哲学，也是建这个网站的宗旨。所以选择了用静态页面这种方式，采用了这样一个模板，尽最大努力简化一些不必要的累赘，而只关注于内容本身。人生是一条很长的路，而我又是个懒人，希望这里是一个新起点，让我能更多一点的记录其中的绝望与希望、挣扎和成长。
